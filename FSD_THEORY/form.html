@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Example</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container mt-4">
+
+    <form>
+
+        <h1 class="text-center mb-4">
+            Chaitanya Bharathi Institute of Technology (Autonomous)
+        </h1>
+
+        <!-- EMAIL -->
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">
+                Email Address
+            </label>
+
+            <input type="email"
+                   class="form-control"
+                   id="exampleInputEmail1"
+                   placeholder="Enter email">
+
+            <small class="text-muted">
+                We'll never share your email with anyone else.
+            </small>
+        </div>
+
+        <!-- PASSWORD -->
+        <div class="mb-3">
+            <label for="Password" class="form-label">
+                Password
+            </label>
+
+            <input type="password"
+                   class="form-control"
+                   id="Password"
+                   placeholder="Password">
+        </div>
+
+        <!-- DROPDOWN -->
+        <div class="mb-3">
+            <label for="select1" class="form-label">
+                Select List (Select One)
+            </label>
+
+            <select class="form-select" id="select1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </div>
+
+        <!-- MULTIPLE SELECT -->
+        <div class="mb-3">
+            <label for="select22" class="form-label">
+                Multiple Select List (Hold Ctrl/Shift to select more than one)
+            </label>
+
+            <select multiple class="form-select" id="select22">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+
+        <!-- TEXTAREA -->
+        <div class="mb-3">
+            <label for="comment" class="form-label">
+                Comments
+            </label>
+
+            <textarea class="form-control"
+                      id="comment"
+                      rows="5"></textarea>
+        </div>
+
+        <!-- FILE UPLOAD -->
+        <div class="mb-3">
+            <label for="InputFile" class="form-label">
+                File Input
+            </label>
+
+            <input type="file"
+                   class="form-control"
+                   id="InputFile">
+        </div>
+
+        <!-- RADIO BUTTONS -->
+        <fieldset class="mb-3">
+
+            <legend>Radio Buttons</legend>
+
+            <div class="form-check">
+                <input class="form-check-input"
+                       type="radio"
+                       name="optionsRadios"
+                       id="cbit"
+                       value="CBIT"
+                       checked>
+
+                <label class="form-check-label" for="cbit">
+                    CBIT
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input"
+                       type="radio"
+                       name="optionsRadios"
+                       id="mgit"
+                       value="MGIT">
+
+                <label class="form-check-label" for="mgit">
+                    MGIT
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input"
+                       type="radio"
+                       name="optionsRadios"
+                       id="vce"
+                       value="VCE"
+                       disabled>
+
+                <label class="form-check-label" for="vce">
+                    VCE (Disabled)
+                </label>
+            </div>
+
+        </fieldset>
+
+        <!-- CHECKBOX -->
+        <div class="form-check mb-3">
+
+            <input class="form-check-input"
+                   type="checkbox"
+                   id="check1">
+
+            <label class="form-check-label" for="check1">
+                Check me out
+            </label>
+
+        </div>
+
+        <!-- BUTTON -->
+        <button type="submit" class="btn btn-primary">
+            Submit
+        </button>
+
+    </form>
+
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
