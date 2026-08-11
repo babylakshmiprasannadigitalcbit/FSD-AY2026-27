@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Event Handling Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        #box {
+            width: 200px;
+            height: 100px;
+            background: lightblue;
+            text-align: center;
+            line-height: 100px;
+            margin-top: 10px;
+        }
+
+        #parent {
+            padding: 20px;
+            background: lightgreen;
+            margin-top: 20px;
+        }
+
+        #child {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>JavaScript Event Handling Demo</h2>
+
+<!-- Click & Double Click -->
+<button id="btn">Click / Double Click</button>
+
+<br><br>
+
+<!-- Input -->
+<input type="text" id="name" placeholder="Type your name">
+
+<br><br>
+
+<!-- Change -->
+<select id="course">
+    <option value="">Select Course</option>
+    <option>Java</option>
+    <option>Python</option>
+    <option>JavaScript</option>
+</select>
+
+<!-- Mouse Events -->
+<div id="box">Hover Here</div>
+
+<!-- Form Submit -->
+<form id="myForm">
+    <br>
+    <input type="text" placeholder="Username">
+    <button type="submit">Submit</button>
+</form>
+
+<!-- Event Bubbling -->
+<div id="parent">
+    Parent Div
+    <br><br>
+    <button id="child">Child Button</button>
+</div>
+
+<script>
+
+// 1. Page Load
+window.addEventListener("load", function () {
+    console.log("Page Loaded");
+});
+
+// 2. Click
+document.getElementById("btn").addEventListener("click", function () {
+    console.log("Button Clicked");
+});
+
+// 3. Double Click
+document.getElementById("btn").addEventListener("dblclick", function () {
+    console.log("Button Double Clicked");
+});
+
+// 4. Input
+document.getElementById("name").addEventListener("input", function () {
+    console.log("Typing:", this.value);
+});
+
+// 5. Key Down
+document.getElementById("name").addEventListener("keydown", function (event) {
+    console.log("Key Down:", event.key);
+});
+
+// 6. Key Up
+document.getElementById("name").addEventListener("keyup", function (event) {
+    console.log("Key Up:", event.key);
+});
+
+// 7. Change
+document.getElementById("course").addEventListener("change", function () {
+    console.log("Selected:", this.value);
+});
+
+// 8. Mouse Over
+document.getElementById("box").addEventListener("mouseover", function () {
+    this.style.background = "yellow";
+    console.log("Mouse Over");
+});
+
+// 9. Mouse Out
+document.getElementById("box").addEventListener("mouseout", function () {
+    this.style.background = "lightblue";
+    console.log("Mouse Out");
+});
+
+// 10. Form Submit
+document.getElementById("myForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+    console.log("Form Submitted");
+});
+
+// 11. Event Bubbling - Parent
+document.getElementById("parent").addEventListener("click", function () {
+    console.log("Parent Clicked");
+});
+
+// 12. Event Bubbling - Child
+document.getElementById("child").addEventListener("click", function (event) {
+    console.log("Child Button Clicked");
+    event.stopPropagation(); // Prevent parent click
+});
+
+</script>
+
+</body>
+</html>

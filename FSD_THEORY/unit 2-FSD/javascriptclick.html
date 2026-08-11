@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Events Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        #message {
+            font-size: 24px;
+            margin: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h2>JavaScript Button Event Example</h2>
+
+<p id="message">Welcome!</p>
+
+<button id="changeText">Change Text</button>
+<button id="changeColor">Change Color</button>
+<button id="hideText">Hide</button>
+<button id="showText">Show</button>
+<button id="countClick">Click Counter</button>
+<button id="reset">Reset</button>
+
+<p>Total Clicks: <span id="count">0</span></p>
+
+<script>
+
+let count = 0;
+
+const message = document.getElementById("message");
+const counter = document.getElementById("count");
+
+// Change Text
+document.getElementById("changeText").addEventListener("click", function () {
+    message.textContent = "JavaScript is Awesome!";
+});
+
+// Change Color
+document.getElementById("changeColor").addEventListener("click", function () {
+    message.style.color = "blue";
+});
+
+// Hide Text
+document.getElementById("hideText").addEventListener("click", function () {
+    message.style.display = "none";
+});
+
+// Show Text
+document.getElementById("showText").addEventListener("click", function () {
+    message.style.display = "block";
+});
+
+// Count Button Clicks
+document.getElementById("countClick").addEventListener("click", function () {
+    count++;
+    counter.textContent = count;
+});
+
+// Reset Everything
+document.getElementById("reset").addEventListener("click", function () {
+    message.textContent = "Welcome!";
+    message.style.color = "black";
+    message.style.display = "block";
+
+    count = 0;
+    counter.textContent = count;
+});
+
+</script>
+
+</body>
+</html>
