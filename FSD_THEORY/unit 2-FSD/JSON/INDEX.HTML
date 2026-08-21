@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON.parse() Example</title>
+</head>
+<body>
+
+<h2>JSON.parse() Example</h2>
+
+<p id="demo"></p>
+
+<script>
+
+let text = '{"name":"CBIT"}';
+
+let obj = JSON.parse(text);
+
+console.log(obj.name);
+
+// Display on webpage
+document.getElementById("demo").innerHTML = obj.name;
+
+</script>
+
+</body>
+</html>
