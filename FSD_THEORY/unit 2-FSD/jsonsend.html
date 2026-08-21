@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sending JSON</title>
+</head>
+<body>
+
+<h2>Sending JSON Data</h2>
+
+<button onclick="sendData()">Send Data</button>
+
+<script>
+
+function sendData(){
+
+let student={
+name:"CBIT",
+course:"FSD",
+year:2
+};
+
+let jsonData=JSON.stringify(student);
+
+console.log(jsonData);
+
+alert(jsonData);
+
+}
+
+</script>
+
+</body>
+</html>
