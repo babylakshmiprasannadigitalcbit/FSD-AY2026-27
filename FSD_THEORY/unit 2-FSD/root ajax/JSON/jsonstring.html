@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON.stringify() Example</title>
+</head>
+<body>
+
+    <h2>JSON.stringify() Example</h2>
+
+    <button onclick="convertJSON()">Convert to JSON</button>
+
+    <h3>Output</h3>
+
+    <p id="object"></p>
+    <p id="json"></p>
+
+    <script>
+
+        function convertJSON() {
+
+            // JavaScript Object
+            let student = {
+                name: "CBIT",
+                course: "Full Stack Development",
+                year: 2,
+                city: "Hyderabad"
+            };
+
+            // Display JavaScript Object
+            document.getElementById("object").innerHTML =
+                "<b>JavaScript Object:</b><br>" +
+                "Name: " + student.name + "<br>" +
+                "Course: " + student.course + "<br>" +
+                "Year: " + student.year + "<br>" +
+                "City: " + student.city;
+
+            // Convert Object into JSON String
+            let jsonData = JSON.stringify(student);
+
+            // Display JSON String
+            document.getElementById("json").innerHTML =
+                "<br><b>JSON String:</b><br>" +
+                jsonData;
+
+            // Console Output
+            console.log("JavaScript Object:");
+            console.log(student);
+
+            console.log("JSON String:");
+            console.log(jsonData);
+        }
+
+    </script>
+
+</body>
+</html>

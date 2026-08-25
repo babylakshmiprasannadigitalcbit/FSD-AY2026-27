@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Receive JSON</title>
+</head>
+<body>
+
+<h2>Receiving JSON Data</h2>
+
+<button onclick="loadData()">Load Data</button>
+
+<p id="demo"></p>
+
+<script>
+
+function loadData(){
+
+fetch("data.json")
+
+.then(response=>response.json())
+
+.then(data=>{
+
+document.getElementById("demo").innerHTML=
+
+data.name+"<br>"+
+
+data.course+"<br>"+
+
+data.year;
+
+});
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handling Server Responses</title>
+</head>
+<body>
+
+<h2>Handling Server Responses using Fetch API</h2>
+
+<button onclick="getData()">Load Data</button>
+
+<h3>Output</h3>
+
+<p id="demo"></p>
+
+<script>
+
+function getData() {
+
+    fetch("data.json")
+
+    .then(function(response) {
+
+        // Check whether the response is successful
+        if (response.ok) {
+            return response.json();
+        }
+
+        throw new Error("Unable to load data!");
+    })
+
+    .then(function(data) {
+
+        document.getElementById("demo").innerHTML =
+            "<b>Name:</b> " + data.name + "<br>" +
+            "<b>Course:</b> " + data.course + "<br>" +
+            "<b>Year:</b> " + data.year;
+
+    })
+
+    .catch(function(error) {
+
+        document.getElementById("demo").innerHTML =
+            "<span style='color:red'>" + error.message + "</span>";
+
+    });
+
+}
+
+</script>
+
+</body>
+</html>

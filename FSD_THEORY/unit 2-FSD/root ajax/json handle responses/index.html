@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Server Response</title>
+</head>
+<body>
+
+<h2>Handling Server Responses</h2>
+
+<button onclick="getData()">Get Data</button>
+
+<p id="demo"></p>
+
+<script>
+
+function getData(){
+
+fetch("data.json")
+
+.then(response=>{
+
+if(response.ok){
+
+return response.json();
+
+}
+
+else{
+
+throw new Error("File Not Found");
+
+}
+
+})
+
+.then(data=>{
+
+document.getElementById("demo").innerHTML=data.name;// to display only name
+document.getElementById("demo").innerHTML =
+    "<b>Name:</b> " + data.name + "<br>" +
+    "<b>Course:</b> " + data.course + "<br>" +
+    "<b>Year:</b> " + data.year;
+
+})
+
+.catch(error=>{
+
+document.getElementById("demo").innerHTML=error;
+
+});
+
+}
+
+</script>
+
+</body>
+</html>

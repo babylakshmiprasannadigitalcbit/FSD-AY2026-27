@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fetch API Example</title>
+</head>
+<body>
+
+<h2>Fetch API</h2>
+
+<button onclick="getData()">
+Get Data
+</button>
+
+<p id="demo"></p>
+
+<script>
+
+function getData(){
+
+fetch("data.json")
+
+.then(response=>response.json())
+
+.then(data=>{
+
+document.getElementById("demo").innerHTML=
+
+data.name+"<br>"+
+
+data.course+"<br>"+
+
+data.year;
+
+})
+
+.catch(error=>console.log(error));
+
+}
+
+</script>
+
+</body>
+</html>
