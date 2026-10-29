@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Details</title>
+</head>
+<body>
+    <h1>Student Details</h1>
+
+    <p>Name: <%= student.name %></p>
+    <p>Branch: <%= student.branch %></p>
+    <p>Marks: <%= student.marks %></p>
+
+    <h2>Subjects</h2>
+    <ul>
+        <% student.subjects.forEach(function(subject) { %>
+            <li><%= subject %></li>
+        <% }); %>
+    </ul>
+
+    <% if (student.marks >= 40) { %>
+        <p>Result: Pass</p>
+    <% } else { %>
+        <p>Result: Fail</p>
+    <% } %>
+</body>
+</html>

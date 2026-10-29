@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    title Student Details
+  body
+    h1 Student Details
+
+    p Name: #{student.name}
+    p Branch: #{student.branch}
+    p Marks: #{student.marks}
+
+    h2 Subjects
+    ul
+      each subject in student.subjects
+        li= subject
+
+    if student.marks >= 40
+      p Result: Pass
+    else
+      p Result: Fail
